@@ -1,0 +1,17 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "rpssrb/random-posts",
+	"version": "0.1.0",
+	"title": "Random Posts",
+	"category": "widgets",
+	"icon": "smiley",
+	"description": "An example for a ServerSideRender block using minimal ES6 code.",
+	"supports": {
+		"html": false
+	},
+	"textdomain": "random-posts-server-side-render-block-es6",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}
