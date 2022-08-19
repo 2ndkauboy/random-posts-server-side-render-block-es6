@@ -36,16 +36,13 @@ add_action( 'init', 'create_block_rpssrb_block_init' );
  * @return string
  */
 function rpssrb_render_callback( $atts ) {
-	$atts = shortcode_atts(
-		[
-			'post_type'      => 'post',
-			'orderby'        => 'rand',
-			'posts_per_page' => 5,
-		],
-		$atts
-	);
+	$args = [
+		'post_type'      => 'post',
+		'orderby'        => 'rand',
+		'posts_per_page' => (int) $atts['postsToShow'],
+	];
 
-	$query = new WP_Query( $atts );
+	$query = new WP_Query( $args );
 
 	$output = '';
 	if ( $query->have_posts() ) {

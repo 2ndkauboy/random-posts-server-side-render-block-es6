@@ -6,11 +6,17 @@
 	"title": "Random Posts",
 	"category": "widgets",
 	"icon": "smiley",
-	"description": "An example for a ServerSideRender block similar to shortcodes with minimal code ES6 code.",
+	"description": "An example for a ServerSideRender block using minimal ES6 code.",
 	"supports": {
 		"html": false
 	},
 	"textdomain": "random-posts-server-side-render-block-es6",
+	"attributes": {
+		"postsToShow": {
+			"type": "number",
+			"default": 5
+		}
+	},
 	"editorScript": "file:./index.js",
 	"editorStyle": "file:./index.css",
 	"style": "file:./style-index.css"

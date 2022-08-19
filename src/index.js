@@ -1,9 +1,4 @@
 /**
- * External dependencies.
- */
-import ServerSideRender from '@wordpress/server-side-render';
-
-/**
  * Registers a new block provided a unique name and an object defining its behavior.
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-registration/
@@ -30,6 +25,7 @@ import './style.scss';
 /**
  * Internal dependencies
  */
+import Edit from './edit';
 import metadata from './block.json';
 
 /**
@@ -40,12 +36,6 @@ import metadata from './block.json';
 registerBlockType(
 	metadata.name,
 	{
-		edit() {
-			return (
-				<ServerSideRender
-					block="rpssrb/random-posts"
-				/>
-			);
-		}
+		edit: Edit
 	}
 );
